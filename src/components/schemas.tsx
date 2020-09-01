@@ -1,19 +1,24 @@
+const yelpFile = require('./schemas/yelp_introspection.json')
+const shopfifyFile = require('./schemas/shopify_introspection.json')
+const swapiFile = require('./schemas/swapi_introspection.json')
+
 export const PRESETS = [
     {
-        schema: 'YELP',
+        name: 'YELP',
         version:'3.1.2',
-        file:'./components/schemas/yelp_introspection.json'
+        source: yelpFile
     },
     {
-        schema: 'Shopify',
+        name: 'Shopify',
         version:'7.1.1',
-        file:'./components/schemas/shopify_introspection.json'
+        source:shopfifyFile
     },
     {
-        schema: 'Swapi',
+        name: 'Swapi',
         version:'0.4.1',
-        file:'./components/schemas/swapi_introspection.json'
+        source:swapiFile
     }
 ]
 
-export const defaultPreset = 'Shopify'
+export const defaultPreset = PRESETS[0]
+

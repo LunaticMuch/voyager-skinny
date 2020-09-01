@@ -9,7 +9,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  node:{fs: 'empty'},
+  // node:{fs: 'empty'},
   devServer: {
     contentBase: root('src'),
     watchContentBase: true,
@@ -34,14 +34,6 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: [/\.(spec|e2e)\.ts$/],
-      },
-      {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: ['@babel/env', '@babel/react']
-        }
       }
     ]
   },
