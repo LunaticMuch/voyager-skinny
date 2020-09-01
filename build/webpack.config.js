@@ -34,6 +34,10 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: [/\.(spec|e2e)\.ts$/],
+      },
+      {
+        test: /\.graphql$/,
+        use:'raw-loader'
       }
     ]
   },
